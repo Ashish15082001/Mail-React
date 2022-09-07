@@ -6,7 +6,7 @@ import styles from "./MailItem.module.css";
 
 function MailItem({ mailId }) {
   const navigate = useNavigate();
-  const { folder } = useParams();
+  const { folder, mailId: mailIdParam } = useParams();
   const dispatch = useDispatch();
   const { subject, content, unread } = useSelector(
     (state) => state.mails.mailEntities[mailId]
@@ -15,6 +15,7 @@ function MailItem({ mailId }) {
     <li
       className={styles["mail"]}
       data-unread={unread}
+      data-active={mailIdParam === mailId}
       onClick={() => {
         dispatch(markRead({ mailId }));
         navigate(`/${folder}/${mailId}`);

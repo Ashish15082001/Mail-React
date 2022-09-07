@@ -13,6 +13,10 @@
   border-left: 0.5rem solid var(--color-primary);
 }
 
+.mail[data-active="true"] {
+  background-color: var(--color-background-highlight);
+}
+
 .mail-subject {
   font-size: var(--font-large);
   color: var(--color-font-faded);
