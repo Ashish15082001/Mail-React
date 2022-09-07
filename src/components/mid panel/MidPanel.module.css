@@ -1,5 +1,6 @@
 .mid-panel {
   background-color: var(--color-white);
+  max-height: 100vh;
 }
 
 .mid-panel-head {

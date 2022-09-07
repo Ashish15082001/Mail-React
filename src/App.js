@@ -8,7 +8,17 @@ function App() {
   return (
     <Routes>
       <Route
-        path="*"
+        path="/:folder/:mailId"
+        element={
+          <React.Fragment>
+            <LeftPanel />
+            <MidPanel />
+            <RightPanel />
+          </React.Fragment>
+        }
+      ></Route>
+      <Route
+        path="/:folder"
         element={
           <React.Fragment>
             <LeftPanel />

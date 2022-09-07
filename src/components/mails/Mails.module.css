@@ -1,3 +1,4 @@
 .mails {
   list-style: none;
+  overflow-y: scroll;
 }

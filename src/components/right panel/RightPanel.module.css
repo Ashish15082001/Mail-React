@@ -1,3 +1,18 @@
 .right-panel {
-  background-color: blueviolet;
+  background-color: var(--color-white);
+  padding: 8rem;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.mail-subject {
+  font-size: var(--font-mega);
+  color: var(--color-font);
+  margin-bottom: 4rem;
+  font-weight: var(--font-bold);
+}
+
+.mail-content {
+  font-size: var(--font-large);
+  color: var(--color-font-faded);
 }

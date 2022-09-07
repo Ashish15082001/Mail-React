@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import ArrowDownIcon from "../../icons/ArrowDownIcon";
 import InboxIcon from "../../icons/InboxIcon";
 import SearchIcon from "../../icons/SearchIcon";
 import styles from "./LeftPanel.module.css";
 
 function LeftPanel() {
-  const { pathname } = useLocation();
+  const { folder } = useParams();
   const [isFoldersVisible, setIsFolderVisible] = useState(true);
   const navigate = useNavigate();
 
@@ -39,7 +39,7 @@ function LeftPanel() {
             <li
               className={styles["folder"]}
               onClick={() => navigate("/inbox")}
-              data-active={pathname === "/inbox"}
+              data-active={folder === "inbox"}
             >
               <div className={styles["folder-container"]}>
                 <span className={styles["icon-container"]}>
@@ -51,7 +51,7 @@ function LeftPanel() {
             <li
               className={styles["folder"]}
               onClick={() => navigate("/spam")}
-              data-active={pathname === "/spam"}
+              data-active={folder === "spam"}
             >
               <div className={styles["folder-container"]}>
                 <span className={styles["icon-container"]}>
@@ -63,7 +63,7 @@ function LeftPanel() {
             <li
               className={styles["folder"]}
               onClick={() => navigate("/deleted-items")}
-              data-active={pathname === "/inbox"}
+              data-active={folder === "deleted-items"}
             >
               <div className={styles["folder-container"]}>
                 <span className={styles["icon-container"]}>
@@ -72,7 +72,11 @@ function LeftPanel() {
                 <p className={styles["folder-name"]}>Deleted Items</p>
               </div>
             </li>
-            <li className={styles["folder"]}>
+            <li
+              className={styles["folder"]}
+              // onClick={() => navigate("/custom-folder")}
+              // data-active={folder === "custom-folder"}
+            >
               <div className={styles["folder-container"]}>
                 <span className={styles["icon-container"]}>
                   <InboxIcon />

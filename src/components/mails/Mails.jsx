@@ -1,15 +1,16 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { useLocation } from "react-router";
+import { useParams } from "react-router";
 import MailItem from "../mail item/MailItem";
 import styles from "./Mails.module.css";
 
 function Mails() {
-  const { pathname } = useLocation();
+  const { folder } = useParams();
+
   const mailIds = useSelector((state) => {
-    if (pathname === "/inbox") return state.mails.inboxMailsIds;
-    if (pathname === "/spam") return state.mails.spamMailsIds;
-    if (pathname === "/deleted-items") return state.mails.deletedMailsIds;
+    if (folder === "inbox") return state.mails.inboxMailsIds;
+    if (folder === "spam") return state.mails.spamMailsIds;
+    if (folder === "deleted-items") return state.mails.deletedMailsIds;
   });
 
   return (
