@@ -44,6 +44,34 @@ const initialState = {
       content:
         "We foster our pipeline of future leaders with 47 employee networks and 7 global employee resource groups, servicing an active community of thousands across Microsoft",
     },
+    "guid-7": {
+      mId: "guid-7",
+      unread: false,
+      subject: "Empower your future",
+      content:
+        "We foster our pipeline of future leaders with 47 employee networks and 7 global employee resource groups, servicing an active community of thousands across Microsoft",
+    },
+    "guid-8": {
+      mId: "guid-8",
+      unread: false,
+      subject: "Empower your future",
+      content:
+        "We foster our pipeline of future leaders with 47 employee networks and 7 global employee resource groups, servicing an active community of thousands across Microsoft",
+    },
+    "guid-9": {
+      mId: "guid-9",
+      unread: false,
+      subject: "Empower your future",
+      content:
+        "We foster our pipeline of future leaders with 47 employee networks and 7 global employee resource groups, servicing an active community of thousands across Microsoft",
+    },
+    "guid-10": {
+      mId: "guid-10",
+      unread: false,
+      subject: "Empower your future",
+      content:
+        "We foster our pipeline of future leaders with 47 employee networks and 7 global employee resource groups, servicing an active community of thousands across Microsoft",
+    },
   },
   inboxMailsIds: {
     "guid-1": "guid-1",
@@ -52,6 +80,10 @@ const initialState = {
     "guid-4": "guid-4",
     "guid-5": "guid-5",
     "guid-6": "guid-6",
+    "guid-7": "guid-7",
+    "guid-8": "guid-8",
+    "guid-9": "guid-9",
+    "guid-10": "guid-10",
   },
   spamMailsIds: {
     "guid-1": "guid-1",

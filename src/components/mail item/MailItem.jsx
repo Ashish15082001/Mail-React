@@ -31,7 +31,6 @@ function MailItem({ mailId }) {
         <p className={styles["mail-date"]}>12:58</p>
       </div>
       <p className={styles["mail-content"]}>
-        {" "}
         {content.slice(0, 45)}
         {content.length > 45 ? "..." : ""}
       </p>
