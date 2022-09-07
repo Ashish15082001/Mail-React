@@ -32,7 +32,7 @@ const initialState = {
     },
     "guid-5": {
       mId: "guid-5",
-      unread: false,
+      unread: true,
       subject: "New game is available to in your steam account",
       content:
         "We foster our pipeline of future leaders with 47 employee networks and 7 global employee resource groups, servicing an active community of thousands across Microsoft",
@@ -46,14 +46,14 @@ const initialState = {
     },
     "guid-7": {
       mId: "guid-7",
-      unread: false,
+      unread: true,
       subject: "Empower your future",
       content:
         "We foster our pipeline of future leaders with 47 employee networks and 7 global employee resource groups, servicing an active community of thousands across Microsoft",
     },
     "guid-8": {
       mId: "guid-8",
-      unread: false,
+      unread: true,
       subject: "Empower your future",
       content:
         "We foster our pipeline of future leaders with 47 employee networks and 7 global employee resource groups, servicing an active community of thousands across Microsoft",
@@ -67,7 +67,7 @@ const initialState = {
     },
     "guid-10": {
       mId: "guid-10",
-      unread: false,
+      unread: true,
       subject: "Empower your future",
       content:
         "We foster our pipeline of future leaders with 47 employee networks and 7 global employee resource groups, servicing an active community of thousands across Microsoft",

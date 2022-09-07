@@ -4,6 +4,7 @@
   border-left: 0.5rem solid none;
   cursor: pointer;
   position: relative;
+  margin-block: 0.5rem;
 }
 
 .delete-icon-container {
