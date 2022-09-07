@@ -1,0 +1,75 @@
+.left-panel {
+  background-color: var(--color-secondary);
+  padding: 0.8rem;
+}
+
+.left-panel-title-container {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.left-panel-title {
+  color: var(--color-font);
+  font-size: var(--font-large);
+  font-weight: var(--font-bold);
+}
+
+.arrow-icon-container {
+  margin-right: 1rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.arrow-icon-container[data-expand="false"] {
+  transform: rotateZ(-90deg);
+}
+
+.arrow-icon-container:hover {
+  background-color: var(--color-background-highlight);
+}
+
+.folders {
+  list-style: none;
+}
+
+.folder {
+  padding: 0.5rem 1rem 0.5rem 3.8rem;
+  cursor: pointer;
+}
+
+.folder:hover {
+  background-color: var(--color-background-highlight);
+}
+
+.folder:hover path {
+  fill: var(--color-primary);
+}
+
+.folder:hover .folder-name {
+  color: var(--color-primary);
+}
+
+.folder-container {
+  display: flex;
+  align-items: center;
+}
+
+.folder-name {
+  font-size: var(--font-medium);
+  color: var(--color-font-faded);
+}
+
+.icon-container {
+  margin-right: 0.8rem;
+}
+
+.icon-container > svg path {
+  fill: var(--color-font-faded);
+}
