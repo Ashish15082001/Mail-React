@@ -7,7 +7,8 @@ function RightPanel() {
   const { mailId } = useParams();
   const mailData = useSelector((state) => state.mails.mailEntities[mailId]);
 
-  console.log(mailData);
+  console.log(mailId);
+
   return (
     <div className={styles["right-panel"]}>
       {mailId && (

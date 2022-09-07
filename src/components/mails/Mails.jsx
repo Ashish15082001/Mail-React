@@ -6,6 +6,7 @@ import styles from "./Mails.module.css";
 
 function Mails() {
   const { folder } = useParams();
+  console.log(folder);
 
   const mailIds = useSelector((state) => {
     if (folder === "inbox") return state.mails.inboxMailsIds;
