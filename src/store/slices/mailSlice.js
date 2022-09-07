@@ -106,8 +106,17 @@ const mailSlice = createSlice({
       mailsIds.forEach((mailId) => (state.mailEntities[mailId].unread = false));
     },
     deleteMail(state, action) {
-      const { mailId } = action.payload;
-      state.deletedMailsIds[mailId] = mailId;
+      const { mailId, folder } = action.payload;
+      console.log(mailId, folder);
+      if (folder === "inbox") {
+        delete state.inboxMailsIds[mailId];
+        state.deletedMailsIds[mailId] = mailId;
+      }
+      if (folder === "spam") {
+        delete state.spamMailsIds[mailId];
+        state.deletedMailsIds[mailId] = mailId;
+      }
+      if (folder === "deleted-items") delete state.deletedMailsIds[mailId];
     },
   },
 });

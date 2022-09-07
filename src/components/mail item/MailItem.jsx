@@ -1,7 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router";
-import { markRead } from "../../store/slices/mailSlice";
+import DeleteIcon from "../../icons/DeleteIcon";
+import { deleteMail, markRead } from "../../store/slices/mailSlice";
 import styles from "./MailItem.module.css";
 
 function MailItem({ mailId }) {
@@ -21,6 +22,12 @@ function MailItem({ mailId }) {
         navigate(`/${folder}/${mailId}`);
       }}
     >
+      <span
+        className={styles["delete-icon-container"]}
+        onClick={() => dispatch(deleteMail({ mailId, folder }))}
+      >
+        <DeleteIcon />
+      </span>
       <p className={styles["mail-subject"]}>
         {subject.slice(0, 35)}
         {subject.length > 35 ? "..." : ""}

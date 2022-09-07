@@ -3,6 +3,22 @@
   padding-block: 1rem;
   border-left: 0.5rem solid none;
   cursor: pointer;
+  position: relative;
+}
+
+.delete-icon-container {
+  position: absolute;
+  right: 1rem;
+  display: none;
+}
+
+.mail[data-active="true"] .delete-icon-container,
+.mail:hover .delete-icon-container {
+  display: block;
+}
+
+.delete-icon-container > span path {
+  fill: var(--color-primary);
 }
 
 .mail:hover {
