@@ -25,6 +25,20 @@ function MidPanel() {
           <p>Mark all as read</p>
         </div>
       </div>
+      <div className={styles["tab-filter-container"]}>
+        <div className={styles["tab-container"]}>
+          <p className={styles["tab"]} data-active={true}>
+            Focused
+          </p>
+          <p className={styles["tab"]}>Other</p>
+        </div>
+        <div className={styles["filter-container"]}>
+          <p>Filter</p>
+          <span>
+            <ArrowDownIcon />
+          </span>
+        </div>
+      </div>
       <Mails />
     </div>
   );

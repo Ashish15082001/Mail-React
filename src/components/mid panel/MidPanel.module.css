@@ -55,3 +55,58 @@
 .mark-all-container:hover p {
   color: var(--color-primary);
 }
+
+.tab-filter-container {
+  height: 8rem;
+  padding-inline: 3rem;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tab-container {
+  display: flex;
+}
+
+.tab {
+  cursor: pointer;
+  border-bottom: 0.5rem solid var(--color-white);
+  margin-right: 2rem;
+  font-size: var(--font-mega);
+  font-weight: var(--font-bold);
+  color: var(--color-font-faded);
+}
+
+.tab[data-active="true"] {
+  border-bottom: 0.5rem solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+}
+
+.filter-container p {
+  color: var(--color-primary);
+  font-size: var(--font-large);
+  margin-right: 1rem;
+}
+
+.filter-container > span {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.filter-container > span:hover {
+  background-color: var(--color-background-highlight);
+}
+
+.filter-container > span path {
+  fill: var(--color-primary);
+}

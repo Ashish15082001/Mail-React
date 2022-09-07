@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { useLocation, useNavigate } from "react-router";
 import ArrowDownIcon from "../../icons/ArrowDownIcon";
 import InboxIcon from "../../icons/InboxIcon";
 import SearchIcon from "../../icons/SearchIcon";
 import styles from "./LeftPanel.module.css";
 
 function LeftPanel() {
+  const { pathname } = useLocation();
   const [isFoldersVisible, setIsFolderVisible] = useState(true);
+  const navigate = useNavigate();
 
   function toggleFoldersVisibility() {
     setIsFolderVisible((currentVisibility) => !currentVisibility);
@@ -19,6 +22,7 @@ function LeftPanel() {
           <SearchIcon />
         </span>
       </div>
+
       <div className={styles["left-panel-title-container"]}>
         <span
           className={styles["arrow-icon-container"]}
@@ -32,7 +36,11 @@ function LeftPanel() {
       <div className={styles["folders-container"]}>
         {isFoldersVisible && (
           <ul className={styles["folders"]}>
-            <li className={styles["folder"]}>
+            <li
+              className={styles["folder"]}
+              onClick={() => navigate("/inbox")}
+              data-active={pathname === "/inbox"}
+            >
               <div className={styles["folder-container"]}>
                 <span className={styles["icon-container"]}>
                   <InboxIcon />
@@ -40,7 +48,11 @@ function LeftPanel() {
                 <p className={styles["folder-name"]}>Inbox</p>
               </div>
             </li>
-            <li className={styles["folder"]}>
+            <li
+              className={styles["folder"]}
+              onClick={() => navigate("/spam")}
+              data-active={pathname === "/spam"}
+            >
               <div className={styles["folder-container"]}>
                 <span className={styles["icon-container"]}>
                   <InboxIcon />
@@ -48,7 +60,11 @@ function LeftPanel() {
                 <p className={styles["folder-name"]}>Spam</p>
               </div>
             </li>
-            <li className={styles["folder"]}>
+            <li
+              className={styles["folder"]}
+              onClick={() => navigate("/deleted-items")}
+              data-active={pathname === "/inbox"}
+            >
               <div className={styles["folder-container"]}>
                 <span className={styles["icon-container"]}>
                   <InboxIcon />

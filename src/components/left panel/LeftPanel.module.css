@@ -74,15 +74,18 @@
   cursor: pointer;
 }
 
-.folder:hover {
+.folder:hover,
+.folder[data-active="true"] {
   background-color: var(--color-background-highlight);
 }
 
-.folder:hover path {
+.folder:hover path,
+.folder[data-active="true"] path {
   fill: var(--color-primary);
 }
 
-.folder:hover .folder-name {
+.folder:hover .folder-name,
+.folder[data-active="true"] .folder-name {
   color: var(--color-primary);
 }
 
