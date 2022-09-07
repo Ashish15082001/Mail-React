@@ -1,6 +1,36 @@
 .left-panel {
   background-color: var(--color-secondary);
-  padding: 0.8rem;
+}
+
+.search-bar {
+  background-color: var(--color-background-highlight);
+  height: 5rem;
+  padding-inline: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar > input {
+  border: none;
+  outline: none;
+  background-color: var(--color-background-highlight);
+  font-size: var(--font-medium);
+  color: var(--color-font);
+}
+
+.search-bar > input::placeholder {
+  color: var(--color-font-faded);
+}
+
+.search-bar > span {
+  display: grid;
+  place-items: center;
+  scale: 1.5;
+  cursor: pointer;
+}
+
+.search-bar > span path {
+  fill: var(--color-primary);
 }
 
 .left-panel-title-container {
@@ -40,7 +70,7 @@
 }
 
 .folder {
-  padding: 0.5rem 1rem 0.5rem 3.8rem;
+  padding: 0.7rem 1rem 0.7rem 3.8rem;
   cursor: pointer;
 }
 
