@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import ArrowDownIcon from "../../icons/ArrowDownIcon";
+import DeleteIcon from "../../icons/DeleteIcon";
+import FolderIcon from "../../icons/FolderIcon";
 import InboxIcon from "../../icons/InboxIcon";
 import SearchIcon from "../../icons/SearchIcon";
+import SpamIcon from "../../icons/SpamIcon";
 import styles from "./LeftPanel.module.css";
 
 function LeftPanel() {
@@ -55,7 +58,7 @@ function LeftPanel() {
             >
               <div className={styles["folder-container"]}>
                 <span className={styles["icon-container"]}>
-                  <InboxIcon />
+                  <SpamIcon />
                 </span>
                 <p className={styles["folder-name"]}>Spam</p>
               </div>
@@ -67,7 +70,7 @@ function LeftPanel() {
             >
               <div className={styles["folder-container"]}>
                 <span className={styles["icon-container"]}>
-                  <InboxIcon />
+                  <DeleteIcon />
                 </span>
                 <p className={styles["folder-name"]}>Deleted Items</p>
               </div>
@@ -79,7 +82,7 @@ function LeftPanel() {
             >
               <div className={styles["folder-container"]}>
                 <span className={styles["icon-container"]}>
-                  <InboxIcon />
+                  <FolderIcon />
                 </span>
                 <p className={styles["folder-name"]}>Custom Folder</p>
               </div>
